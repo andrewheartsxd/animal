@@ -20,14 +20,28 @@ function Animal(name, speed, focus)
   };
 };
 
-rabbitAnimal = new Animal("Bugs Bunny", 10, 8);
-turtleAnimal = new Animal("Leonardo", 1, 10);
+rabbitAnimal = new Animal("Bugs Bunny", 10, 5);
+turtleAnimal = new Animal("Leonardo", 4, 9);
 
-console.log(rabbitAnimal.position);
-rabbitAnimal.run();
-console.log(rabbitAnimal.position);
+while(rabbitAnimal.position < 100 && turtleAnimal.position < 100)
+{
+  console.log("Rabbit at " + rabbitAnimal.position);
+  rabbitAnimal.run();
+  console.log("Rabbit at " + rabbitAnimal.position);
 
+  console.log("Turtle at " + turtleAnimal.position);
+  turtleAnimal.run();
+  console.log("Turtle at " + turtleAnimal.position);
+};
 
+if(rabbitAnimal.position > turtleAnimal.position)
+{
+  alert(rabbitAnimal.name + " has won!")
+}
+else
+{
+  alert(turtleAnimal.name + " has won!")
+}
 
 
 
