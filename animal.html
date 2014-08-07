@@ -5,16 +5,13 @@
 var rabbit;
 var turtle;
 
-function Animal(name, speed, focus)
-{
+function Animal(name, speed, focus) {
   this.name = name;
   this.speed = speed;
   this.focus = focus;
   this.position = 0;
-  this.run = function()
-  {
-    if(Math.Random() * 10 < this.focus)
-    {
+  this.run = function() {
+    if(Math.random() * 10 < this.focus) {
       this.position = this.position + this.speed
     };
   };
@@ -25,32 +22,28 @@ turtleAnimal = new Animal("Leonardo", 4, 9);
 
 function race()
 {
-  while(rabbitAnimal.position < 400 && turtleAnimal.position < 400)
-  {
-    console.log("Rabbit at " + rabbitAnimal.position);
-    rabbitAnimal.run();
-    console.log("Rabbit at " + rabbitAnimal.position);
+  while (rabbitAnimal.position < 400 && turtleAnimal.position < 400) {
+      console.log("Rabbit position: " + rabbitAnimal.position);
+      rabbitAnimal.run();
+      console.log("Rabbit position: " + rabbitAnimal.position);
 
-    console.log("Turtle at " + turtleAnimal.position);
-    turtleAnimal.run();
-    console.log("Turtle at " + turtleAnimal.position);
-  };
+      console.log("Turtle position: " + turtleAnimal.position);
+      turtleAnimal.run();
+      console.log("Turtle position: " + turtleAnimal.position);
+    };
 
-  if(rabbitAnimal.position > turtleAnimal.position)
-  {
-    return rabbitAnimal.name + " has won!"
-  }
-  else if(rabbitAnimal.position === turtleAnimal.position)
-  {
-    return "Holy smokes! It's a tie!"
-  }
-  else
-  {
-    return turtleAnimal.name + " has won!"
-  };
+    if(rabbitAnimal.position > turtleAnimal.position) {
+      return rabbitAnimal.name + " has won!"
+    }
+    else if(rabbitAnimal.position < turtleAnimal.position) {
+      return turtleAnimal.name + " has won!"
+    }
+    else {
+      return "Holy smokes! A tie!"
+    };
 };
 
-function race();
+alert(race());
 
 </script>
 </html>

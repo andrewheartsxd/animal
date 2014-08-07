@@ -17,7 +17,6 @@ Two different instances of this object are then created:
 1. rabbitAnimal
 2. turtleAnimal
 
-Inside a while loop, the run method is called for both rabbitAnimal and turtleAnimal until either Animal's position exceeds 400 (the distance of the race). The positions are then compared and the greater position is declared the winner.
+A new function, race(), is then created. Inside the race function, inside a while loop, the run method is called for both rabbitAnimal and turtleAnimal until either Animal's position exceeds 400 (the distance of the race). The positions are then compared and the greater position wins. The function then returns "'winner name' has won" or "Holy smokes! A tie!"
 
-
-
+The race function is then called inside an alert.
