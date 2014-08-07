@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<script>
+
+var rabbit;
+var turtle;
+
+function Animal(name, speed, focus)
+{
+  this.name = name;
+  this.speed = speed;
+  this.focus = focus;
+  this.position = 0;
+  this.run = function()
+  {
+    if(4 < this.focus)
+    {
+      this.position = this.position + this.speed
+    };
+  };
+};
+
+rabbitAnimal = new Animal("Bugs Bunny", 10, 2);
+turtleAnimal = new Animal("Leonardo", 1, 10);
+
+console.log(rabbitAnimal.position);
+rabbitAnimal.run
+console.log(rabbitAnimal.position);
+
+
+
+
+
+// while(rabbitAnimal.position < 25 || turtleAnimal.position < 25)
+// {
+//   rabbitAnimal();
+//   console.log(rabbitAnimal.position)
+//   turtleAnimal();
+//   console.log(turtleAnimal.position)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
